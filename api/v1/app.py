@@ -15,6 +15,7 @@ app.register_blueprint(app_views, url_prefix="/api/v1")
 def teardown_appcontext(exception):
     storage.close()
 
+
 if os.getenv("HBNB_API_HOST"):
     host = os.getenv("HBNB_API_HOST")
 else:
