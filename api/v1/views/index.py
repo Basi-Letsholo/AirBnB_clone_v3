@@ -31,10 +31,3 @@ def stats():
             "users": storage.count(User)
             }
     return stats_json
-
-
-@app_views.errorhandler(404)
-def page_not_found(error):
-    return {
-            "error": "Not found"
-            }, 404
